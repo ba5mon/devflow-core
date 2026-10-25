@@ -6,7 +6,7 @@ import { ss, seg, clamp } from './lib.js';
 import * as s02 from './shots/s02_rouen.js';
 
 const Q = new URLSearchParams(location.search), SSAA = +(Q.get('ssaa') || 2);
-const DUR = 5;
+const DUR = +(Q.get('dur') || 5);
 window.DUR = DUR;
 const canvas = document.getElementById('c');
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, preserveDrawingBuffer: true });
